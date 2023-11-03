@@ -1,0 +1,19 @@
+<div style="display: flex; justify-content: center; align-items:start; height: 100vh;">
+<form id="signup" (submit)="signup()" style="text-align: center;background-color: moccasin;">
+  <div>
+    <label for="username">Username: *</label><br>
+    <input type="text" id="username" name="username" [(ngModel)]="signupData.username" required>
+  </div>
+  <div>
+    <label for="email">Email: *</label><br>
+    <input type="email" id="email" name="email" [(ngModel)]="signupData.email" required>
+  </div>
+  <div>
+    <label for="password">Password: *</label>
+    <br>
+    <input type="password" id="password" name="password" [(ngModel)]="signupData.password" required>
+  </div>
+  <button type="submit">SignUp</button>
+</form>
+</div>
+

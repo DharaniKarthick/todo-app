@@ -1,0 +1,27 @@
+<!-- <form id ="login" (submit)="login()">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="loginData.username" [ngModelOptions]="{standalone: true}" required>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="loginData.password" [ngModelOptions]="{standalone: true}" required>
+  </div>
+  <button type="submit">Login</button>
+</form> -->
+<div style="display: flex; justify-content: center; align-items:start; height: 100vh;">
+  <form id="login" (submit)="login()" style="text-align: center;background-color: moccasin;">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="loginData.username" [ngModelOptions]="{standalone: true}" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="loginData.password" [ngModelOptions]="{standalone: true}" required>
+    </div>
+    <button type="submit">Login</button>
+    <br>
+    <span>Don't have an account?
+      <a routerLink="/signUp">signUp</a></span>
+  </form>
+</div>
