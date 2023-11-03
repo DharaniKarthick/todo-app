@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   loginData = { username: '', password: '' };
-  apiUrl = 'https://todoapplication20231102110016.azurewebsites.net/'+'/api/authentication/login'; // Replace with your login API endpoint
+  apiUrl = 'https://todoapplication20231102110016.azurewebsites.net/'+'api/authentication/login'; // Replace with your login API endpoint
   token: string = ''
 
   constructor(private http: HttpClient,private router: Router) {}
