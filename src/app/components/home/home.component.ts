@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${this.token}`
     });
-
+    task.itemStatus=!task.itemStatus;
     this.http.put<any>('https://todoapplication20231102110016.azurewebsites.net/api/ToDoItems/'+task.itemId,task, { headers }).subscribe((response: any) => {
       // Handle the response, which should be a list of tasks
       this.loadTasks();
@@ -94,8 +94,8 @@ export class HomeComponent implements OnInit {
       (response: any) => {
         // Handle the response, if needed
         // For example, you can check for a success message or status in the response
-        console.log('Delete response:', response); // Add this line for debugging
-        this.tasks = response;
+        //console.log('Delete response:', response); // Add this line for debugging
+        //this.tasks = response;
         this.loadTasks();
         // Call loadTasks to refresh the task list after a successful delete
         //this.loadTasks();

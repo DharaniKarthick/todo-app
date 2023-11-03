@@ -10,7 +10,7 @@
       <button (click)="deleteTask(task.itemId)">Delete</button>
     </li>
   </ul> -->
-  <h3 style="display: flex; justify-content: center;color:#042eaa">Enter your To-Do itemk</h3>
+  <h3 style="display: flex; justify-content: center;color:#042eaa">Enter your To-Do item</h3>
   <div style="display: flex; justify-content: center;">
   <form #save="ngForm"  (ngSubmit)="createTask()">
     <input type="text" #title id="itemname" name="itemname" [(ngModel)]="newTask.itemName" placeholder="Task Name" required>
@@ -25,7 +25,9 @@
       <h3>{{ task.itemName }}</h3><p>{{ task.itemDescription }}</p>
     </div>
     <div class="task-actions">
-      <input type="checkbox" class="toggle-button" (click)="toggleTask(task)"/>
+      <input type="checkbox"
+      [(ngModel)]
+      ="task.itemStatus" checked="task.itemStatus"class="toggle-button" (click)="toggleTask(task)"/>
       <button class="delete-button" (click)="deleteTask(task.itemId)">X</button>
     </div>
   </div>
